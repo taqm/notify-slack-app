@@ -1,0 +1,19 @@
+{
+  "private": true,
+  "scripts": {
+    "dev": "babel-node --extensions .ts src/index.ts "
+  },
+  "dependencies": {
+    "@slack/events-api": "^3.0.0",
+    "@slack/web-api": "^6.0.0",
+    "express": "^4.17.1"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.12.10",
+    "@babel/core": "^7.12.10",
+    "@babel/node": "^7.12.10",
+    "@babel/preset-env": "^7.12.11",
+    "@babel/preset-typescript": "^7.12.7",
+    "typescript": "^4.1.3"
+  }
+}
