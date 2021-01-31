@@ -1,6 +1,6 @@
 import { Router } from 'express';
 
-import '../registory.ts';
+import '../registory';
 import {ClientInfo} from "../ClientInfo";
 import {AppConfig} from "../config";
 
