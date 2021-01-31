@@ -4,7 +4,7 @@ import morgan from 'morgan';
 import { appConfig } from "./config";
 import { Registry } from "./registory";
 import { router } from './routers';
-import {MemoryClientInfoRepository} from "./infra/MemoryClientInfoRepository";
+import { DBClientInfoRepository } from "./infra/DBClientInfoRepository";
 
 const PORT = process.env.PORT ?? 3000;
 
@@ -16,7 +16,7 @@ app.use(express.urlencoded({ extended: true }));
 app.use((req, res, next) => {
   const registry: Registry = {
     appConfig,
-    clientInfoRepository: new MemoryClientInfoRepository(),
+    clientInfoRepository: new DBClientInfoRepository(),
   };
   Object.assign(req, { registry });
   next();
